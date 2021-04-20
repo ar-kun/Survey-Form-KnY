@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <title>Survey Form | KnY</title>
+  </head>
+  <body>
+    <div class="head">
+      <h1 id="title">Kimetsu no Yaiba Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </div>
+    <div class="aler-close">
+      <span
+        ><strong>Thank You!.</strong> Your message has been received. <a href="#"><i class="fas fa-times"></i></a
+      ></span>
+    </div>
+    <form action="" name="Survey-KnY" id="survey-form">
+      <label for="name" id="name-label">
+        Name :
+        <input type="text" name="name" id="name" placeholder="Enter Your Name" required />
+      </label>
+      <label for="email" id="email-label">
+        Email :
+        <input type="email" name="email" id="email" placeholder="Enter Your Email" required />
+      </label>
+      <label for="number" id="number-label">
+        Age :
+        <input type="number" name="number" id="number" placeholder="How Old are You ?" min="10" max="50" required />
+      </label>
+      <label for="dropdown" id="dropdown-label">
+        How do You know KnY :
+        <select name="dropdown" id="dropdown">
+          <option value="">Community</option>
+          <option value="">Trailer Teaser</option>
+          <option value="">Friend</option>
+          <option value="">Other</option>
+        </select>
+      </label>
+      <label for="cr" id="cr-label">
+        Who is Your Favorite Character Pilar KnY :
+        <p><input type="radio" name="cr" id="cr" value="Giyu" checked /> Giyu Tomioka</p>
+      </label>
+      <label for="cr2" id="cr-label">
+        <p><input type="radio" name="cr" id="cr2" value="Mitsuri" /> Mitsuri Kanroji</p>
+      </label>
+      <label for="cr3" id="cr-label">
+        <p><input type="radio" name="cr" id="cr3" value="Obanai" /> Obanai Iguro</p>
+      </label>
+      <label for="cr4" id="cr-label">
+        <p><input type="radio" name="cr" id="cr4" value="Sanemi" /> Sanemi Shinazugawa</p>
+      </label>
+      <label for="cr5" id="cr-label">
+        <p><input type="radio" name="cr" id="cr5" value="Gyomei" /> Gyomei Himejima</p>
+      </label>
+      <label for="cr6" id="cr-label">
+        <p><input type="radio" name="cr" id="cr6" value="Tengen" /> Tengen Uzui</p>
+      </label>
+      <label for="cr7" id="cr-label">
+        <p><input type="radio" name="cr" id="cr7" value="Muichiro" /> Muichiro Tokito</p>
+      </label>
+      <label for="cr8" id="cr-label">
+        <p><input type="radio" name="cr" id="cr8" value="Shinobu" /> Shinobu Kocho</p>
+      </label>
+      <label for="cr9" id="cr-label">
+        <p><input type="radio" name="cr" id="cr9" value="Kyojuro" /> Kyojuro Rengoku</p>
+      </label>
+      <label for="cr-s" id="cr-s-label">
+        What is Your Favorite KnY :
+        <p><input type="checkbox" name="cr-s" id="cr-s" value="series" checked /> Kimetsu no Yaiba Series</p>
+      </label>
+      <label for="cr-m" id="cr-m-label">
+        <p><input type="checkbox" name="cr-m" id="cr-m" value="movies" /> Kimetsuno Yaiba - Mugen Train</p>
+      </label>
+      <label for="cr-k" id="cr-k-label">
+        <p><input type="checkbox" name="cr-k" id="cr-k" value="comics" /> Kimetsuno Yaiba Comics</p>
+      </label>
+      <label for="comments" id="comments-label">
+        Any Comments or Suggestion ?
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      </label>
+      <button id="submit" type="submit">Submit</button>
+      <div class="loader" id="loader">
+        <img src="img/loader.gif" alt="Loader" />
+        <button id="mysubmit" type="submit">Loading...</button>
+      </div>
+    </form>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzixa1biNwvRmpsCZxGH-WoZFX3ZAqgPWHaOH7Xf-nEs01riMDe8oSsDLfufiMQGgzYdA/exec';
+      const form = document.forms['Survey-KnY'];
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => console.log('Success!', response))
+          .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+  </body>
+</html>

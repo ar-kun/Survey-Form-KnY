@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,900;1,400;1,600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, rgba(2, 0, 36, 0.5) 0%, rgba(9, 105, 121, 0.5) 0%, rgba(0, 212, 255, 0.5) 100%), url(../img/bg.jpg);
+  background-size: cover;
+  z-index: -1;
+}
+body {
+  font-family: Playfair Display, sans-serif;
+  padding-bottom: 50px;
+}
+h1,
+p {
+  text-align: center;
+  color: white;
+}
+h1 {
+  padding-top: 50px;
+  font-size: 35px;
+}
+p {
+  padding-bottom: 20px;
+}
+.head p {
+  margin-bottom: 10px;
+  font-style: oblique;
+  font-weight: bold;
+}
+form {
+  max-width: 600px;
+  background-color: rgba(0, 37, 71, 0.8);
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+label,
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='radio'],
+select {
+  display: block;
+  color: white;
+}
+input[type='text'],
+input[type='email'],
+input[type='number'],
+select,
+textarea {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+  font-family: inherit;
+  color: black;
+}
+input[type='radio'],
+input[type='checkbox'],
+form p label {
+  display: inline;
+}
+label p {
+  margin-top: 10px;
+  margin-bottom: -25px;
+  text-align: left;
+}
+label[id='cr-s-label'],
+label[id='comments-label'] {
+  margin-top: 25px;
+}
+textarea {
+  height: 100px;
+}
+button {
+  width: 100%;
+  height: 35px;
+  background-color: rgb(108, 211, 245);
+  border: 0;
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: bold;
+}
+button[id='mysubmit'] {
+  max-width: 200px;
+  font-size: 15px;
+  margin-top: -35px;
+  background-color: white;
+  font-weight: bold;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+}
+#loader {
+  display: none;
+}
+.loader img {
+  margin-top: -35px;
+  margin-right: -50px;
+  z-index: 1;
+}
+button:hover {
+  background-color: white;
+  color: black;
+}
+.aler-close {
+  display: none;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: lightgreen;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+.aler-close span {
+  margin-left: 10px;
+}
+.aler-close span a {
+  margin-left: 50px;
+}
